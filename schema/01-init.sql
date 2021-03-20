@@ -1,0 +1,8 @@
+GRANT ALL PRIVILEGES ON DATABASE duolingo TO admin;
+ALTER USER admin WITH PASSWORD 'admin';
+
+\c duolingo;
+
+CREATE SCHEMA data;
+CREATE SCHEMA ts;
+SET TIME ZONE 'PST8PDT';
