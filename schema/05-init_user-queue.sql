@@ -1,5 +1,7 @@
 \c duolingo;
+\set AUTOCOMMIT off
 
-INSERT INTO duolingo.data.queue (username) (
-    SELECT username from duolingo.data.users
-);
+COPY duolingo.data.queue(username)
+FROM '/app/users.csv'
+DELIMITER ','
+CSV HEADER;
